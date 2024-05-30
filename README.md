@@ -9,3 +9,6 @@
 # Install ghidra
 1. Download the ghidra from [github releases](https://github.com/NationalSecurityAgency/ghidra/releases) page and unzip it, I used the one with **2462a2d0ab11e30f9e907cd3b4aa6b48dd2642f325617e3d922c28e752be6761** SHA256 hash.
 2. Install java(`apt install openjdk-17-jdk`);
+
+# Generate CFG
+1. Attempted to use [this blog](https://clearbluejar.github.io/posts/callgraphs-with-ghidra-pyhidra-and-jpype/) to generate the CFG for a sample. Failed because I'm unable to instantiate monitor object, this [issue](https://github.com/dod-cyber-crime-center/pyhidra/issues/17) seemed related but did not helped. ~~It seems that it could be added by **add_classpaths**, but I'm not sure what is the java class that needs to be imported.(proved to be a false assumption).~~ It seems that it is provided by [`ghidra-stubs`](https://github.com/clearbluejar/ghidra-pyhidra-callgraphs/blob/77a013f360fae69b582bd75f6277ad8e43290545/requirements.txt#L1C1-L1C13)(see [L266](https://github.com/clearbluejar/ghidra-pyhidra-callgraphs/blob/77a013f360fae69b582bd75f6277ad8e43290545/ghidra_pyhidra_callgraphs.py#L266) and [L20](https://github.com/clearbluejar/ghidra-pyhidra-callgraphs/blob/77a013f360fae69b582bd75f6277ad8e43290545/ghidra_pyhidra_callgraphs.py#L20)).
