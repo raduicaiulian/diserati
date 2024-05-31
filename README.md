@@ -11,4 +11,20 @@
 2. Install java(`apt install openjdk-17-jdk`);
 
 # Generate CFG
+In order to generate the CFG I'm working on 3 plans:
+
 1. Attempted to use [this blog](https://clearbluejar.github.io/posts/callgraphs-with-ghidra-pyhidra-and-jpype/) to generate the CFG for a sample. Failed because I'm unable to instantiate monitor object, this [issue](https://github.com/dod-cyber-crime-center/pyhidra/issues/17) seemed related but did not helped. ~~It seems that it could be added by **add_classpaths**, but I'm not sure what is the java class that needs to be imported.(proved to be a false assumption).~~ It seems that it is provided by [`ghidra-stubs`](https://github.com/clearbluejar/ghidra-pyhidra-callgraphs/blob/77a013f360fae69b582bd75f6277ad8e43290545/requirements.txt#L1C1-L1C13)(see [L266](https://github.com/clearbluejar/ghidra-pyhidra-callgraphs/blob/77a013f360fae69b582bd75f6277ad8e43290545/ghidra_pyhidra_callgraphs.py#L266) and [L20](https://github.com/clearbluejar/ghidra-pyhidra-callgraphs/blob/77a013f360fae69b582bd75f6277ad8e43290545/ghidra_pyhidra_callgraphs.py#L20)).
+2. Use [the gist](https://gist.github.com/bin2415/15028e78d5cf0c708fe1ab82fc252799) found by Ciprian
+
+3. Play with Ghidra Script Manager, from what I see in the gist from the previous point, it looks like whatever script I craft, in theory, it should be easy to make it headless
+
+# Familiarize with Analysis Options
+
+* DWARF analyzer seems uselss for our porpouse (atm w'll focus on Windows only)
+* go trough [this material|https://github.com/HackOvert/GhidraSnippets?tab=readme-ov-file#using-the-flatprogramapi], it gets you up to speed with the basics of flat Programing/Decompiler API + Complex API
+
+
+
+
+<!-- > [!NOTE] -->
+> There is [also GhidraPAL](https://github.com/RolfRolles/GhidraPAL) which was referenced by some of the resources mentioned upward, but it lacks any kind of documentation, there is not even a simple instruction about how to use it so I gaved up on spending any thime on it.
