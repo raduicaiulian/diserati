@@ -25,6 +25,8 @@ from ghidra.program.model.listing import FunctionManager;
 from ghidra.program.model.listing import Listing;
 from ghidra.program.database.code import InstructionDB
 
+OUTPUT_DIRECTORY = "%TEMP%\\out_cfgs\\"
+
 def addBB(bb, G, bb_func_map):
     listing = currentProgram.getListing();
     # iter over the instructions
@@ -192,8 +194,10 @@ def dumpBlocks():
         G = addSuccessors(bb_func_set, bb_func_map, G)
 
         G += '}'
-
-        with open('/tmp/cfg/%s.dot' % func.getName(), 'w') as dot_output:
+        OD = os.path.expandvars(OUTPUT_DIRECTORY)
+        if not os.path.exists(os.path.expandvars(OD)):
+            os.mkdir(OD)         
+        with open( OD + '{0}.dot'.format(func.getName()), 'w') as dot_output:
             dot_output.write(G)
     
 
