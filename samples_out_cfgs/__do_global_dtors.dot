@@ -1,0 +1,111 @@
+digraph "func 0x4015c0" {
+  newrank=true;
+  // Flow Type Legend
+  subgraph cluster_01 { 
+    rank=same;
+    node [shape=plaintext]
+    label = "Legend";
+    key [label=<<table border="0" cellpadding="2" cellspacing="0" cellborder="0">
+                  <tr><td align="right" port="i1">Jump/Fallthrough</td></tr>
+                  <tr><td align="right" port="i2">Call</td></tr>
+                  <tr><td align="right" port="i3">Conditional Jump</td></tr>
+                  <tr><td align="right" port="i4">Conditional Call</td></tr>
+                  <tr><td align="right" port="i5">Other</td></tr>
+               </table>>];
+    key2 [label=<<table border="0" cellpadding="2" cellspacing="0" cellborder="0">
+                   <tr><td port="i1">&nbsp;</td></tr>
+                   <tr><td port="i2">&nbsp;</td></tr>
+                   <tr><td port="i3">&nbsp;</td></tr>
+                   <tr><td port="i4">&nbsp;</td></tr>
+                   <tr><td port="i5">&nbsp;</td></tr>
+                </table>>];
+    key:i1:e -> key2:i1:w [color=gray style=dashed];
+    key:i2:e -> key2:i2:w [color=cyan4 style=dashed];
+    key:i3:e -> key2:i3:w [color=gray];
+    key:i4:e -> key2:i4:w [color=cyan4];
+    key:i5:e -> key2:i5:w [color=gray style=dotted];
+  }
+  bb_4015c0 [shape=plaintext label=<
+    <TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0">
+      <TR>
+        <TD PORT="insn_4015c0" ALIGN="RIGHT"><FONT FACE="monospace">4015c0: </FONT></TD>
+        <TD ALIGN="LEFT"><FONT FACE="monospace">SUB RSP,0x28</FONT></TD>
+        <TD>&nbsp;&nbsp;&nbsp;</TD> // for spacing
+      </TR>
+      <TR>
+        <TD PORT="insn_4015c4" ALIGN="RIGHT"><FONT FACE="monospace">4015c4: </FONT></TD>
+        <TD ALIGN="LEFT"><FONT FACE="monospace">MOV RAX,qword ptr [0x00403010]</FONT></TD>
+        <TD>&nbsp;&nbsp;&nbsp;</TD> // for spacing
+      </TR>
+      <TR>
+        <TD PORT="insn_4015cb" ALIGN="RIGHT"><FONT FACE="monospace">4015cb: </FONT></TD>
+        <TD ALIGN="LEFT"><FONT FACE="monospace">MOV RAX,qword ptr [RAX]</FONT></TD>
+        <TD>&nbsp;&nbsp;&nbsp;</TD> // for spacing
+      </TR>
+      <TR>
+        <TD PORT="insn_4015ce" ALIGN="RIGHT"><FONT FACE="monospace">4015ce: </FONT></TD>
+        <TD ALIGN="LEFT"><FONT FACE="monospace">TEST RAX,RAX</FONT></TD>
+        <TD>&nbsp;&nbsp;&nbsp;</TD> // for spacing
+      </TR>
+      <TR>
+        <TD PORT="insn_4015d1" ALIGN="RIGHT"><FONT FACE="monospace">4015d1: </FONT></TD>
+        <TD ALIGN="LEFT"><FONT FACE="monospace">JZ 0x004015f0</FONT></TD>
+        <TD>&nbsp;&nbsp;&nbsp;</TD> // for spacing
+      </TR>
+    </TABLE>>];
+  bb_4015d3 [shape=plaintext label=<
+    <TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0">
+      <TR>
+        <TD PORT="insn_4015d3" ALIGN="RIGHT"><FONT FACE="monospace">4015d3: </FONT></TD>
+        <TD ALIGN="LEFT"><FONT FACE="monospace">CALL RAX</FONT></TD>
+        <TD>&nbsp;&nbsp;&nbsp;</TD> // for spacing
+      </TR>
+      <TR>
+        <TD PORT="insn_4015d5" ALIGN="RIGHT"><FONT FACE="monospace">4015d5: </FONT></TD>
+        <TD ALIGN="LEFT"><FONT FACE="monospace">MOV RAX,qword ptr [0x00403010]</FONT></TD>
+        <TD>&nbsp;&nbsp;&nbsp;</TD> // for spacing
+      </TR>
+      <TR>
+        <TD PORT="insn_4015dc" ALIGN="RIGHT"><FONT FACE="monospace">4015dc: </FONT></TD>
+        <TD ALIGN="LEFT"><FONT FACE="monospace">LEA RDX,[RAX + 0x8]</FONT></TD>
+        <TD>&nbsp;&nbsp;&nbsp;</TD> // for spacing
+      </TR>
+      <TR>
+        <TD PORT="insn_4015e0" ALIGN="RIGHT"><FONT FACE="monospace">4015e0: </FONT></TD>
+        <TD ALIGN="LEFT"><FONT FACE="monospace">MOV RAX,qword ptr [RAX + 0x8]</FONT></TD>
+        <TD>&nbsp;&nbsp;&nbsp;</TD> // for spacing
+      </TR>
+      <TR>
+        <TD PORT="insn_4015e4" ALIGN="RIGHT"><FONT FACE="monospace">4015e4: </FONT></TD>
+        <TD ALIGN="LEFT"><FONT FACE="monospace">MOV qword ptr [0x00403010],RDX</FONT></TD>
+        <TD>&nbsp;&nbsp;&nbsp;</TD> // for spacing
+      </TR>
+      <TR>
+        <TD PORT="insn_4015eb" ALIGN="RIGHT"><FONT FACE="monospace">4015eb: </FONT></TD>
+        <TD ALIGN="LEFT"><FONT FACE="monospace">TEST RAX,RAX</FONT></TD>
+        <TD>&nbsp;&nbsp;&nbsp;</TD> // for spacing
+      </TR>
+      <TR>
+        <TD PORT="insn_4015ee" ALIGN="RIGHT"><FONT FACE="monospace">4015ee: </FONT></TD>
+        <TD ALIGN="LEFT"><FONT FACE="monospace">JNZ 0x004015d3</FONT></TD>
+        <TD>&nbsp;&nbsp;&nbsp;</TD> // for spacing
+      </TR>
+    </TABLE>>];
+  bb_4015f0 [shape=plaintext label=<
+    <TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0">
+      <TR>
+        <TD PORT="insn_4015f0" ALIGN="RIGHT"><FONT FACE="monospace">4015f0: </FONT></TD>
+        <TD ALIGN="LEFT"><FONT FACE="monospace">ADD RSP,0x28</FONT></TD>
+        <TD>&nbsp;&nbsp;&nbsp;</TD> // for spacing
+      </TR>
+      <TR>
+        <TD PORT="insn_4015f4" ALIGN="RIGHT"><FONT FACE="monospace">4015f4: </FONT></TD>
+        <TD ALIGN="LEFT"><FONT FACE="monospace">RET</FONT></TD>
+        <TD>&nbsp;&nbsp;&nbsp;</TD> // for spacing
+      </TR>
+    </TABLE>>];
+  bb_4015d3:insn_4015ee -> bb_4015d3:insn_4015d3 [color=gray style=solid tooltip="CONDITIONAL_JUMP"];
+  bb_4015d3:insn_4015ee -> bb_4015f0:insn_4015f0 [color=gray style=dashed tooltip="FALL_THROUGH"];
+  bb_4015c0:insn_4015d1 -> bb_4015f0:insn_4015f0 [color=gray style=solid tooltip="CONDITIONAL_JUMP"];
+  bb_4015c0:insn_4015d1 -> bb_4015d3:insn_4015d3 [color=gray style=dashed tooltip="FALL_THROUGH"];
+}

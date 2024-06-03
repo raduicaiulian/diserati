@@ -1,0 +1,89 @@
+digraph "func 0x402660" {
+  newrank=true;
+  // Flow Type Legend
+  subgraph cluster_01 { 
+    rank=same;
+    node [shape=plaintext]
+    label = "Legend";
+    key [label=<<table border="0" cellpadding="2" cellspacing="0" cellborder="0">
+                  <tr><td align="right" port="i1">Jump/Fallthrough</td></tr>
+                  <tr><td align="right" port="i2">Call</td></tr>
+                  <tr><td align="right" port="i3">Conditional Jump</td></tr>
+                  <tr><td align="right" port="i4">Conditional Call</td></tr>
+                  <tr><td align="right" port="i5">Other</td></tr>
+               </table>>];
+    key2 [label=<<table border="0" cellpadding="2" cellspacing="0" cellborder="0">
+                   <tr><td port="i1">&nbsp;</td></tr>
+                   <tr><td port="i2">&nbsp;</td></tr>
+                   <tr><td port="i3">&nbsp;</td></tr>
+                   <tr><td port="i4">&nbsp;</td></tr>
+                   <tr><td port="i5">&nbsp;</td></tr>
+                </table>>];
+    key:i1:e -> key2:i1:w [color=gray style=dashed];
+    key:i2:e -> key2:i2:w [color=cyan4 style=dashed];
+    key:i3:e -> key2:i3:w [color=gray];
+    key:i4:e -> key2:i4:w [color=cyan4];
+    key:i5:e -> key2:i5:w [color=gray style=dotted];
+  }
+  bb_402660 [shape=plaintext label=<
+    <TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0">
+      <TR>
+        <TD PORT="insn_402660" ALIGN="RIGHT"><FONT FACE="monospace">402660: </FONT></TD>
+        <TD ALIGN="LEFT"><FONT FACE="monospace">MOVSXD RAX,dword ptr [RCX + 0x3c]</FONT></TD>
+        <TD>&nbsp;&nbsp;&nbsp;</TD> // for spacing
+      </TR>
+      <TR>
+        <TD PORT="insn_402664" ALIGN="RIGHT"><FONT FACE="monospace">402664: </FONT></TD>
+        <TD ALIGN="LEFT"><FONT FACE="monospace">ADD RCX,RAX</FONT></TD>
+        <TD>&nbsp;&nbsp;&nbsp;</TD> // for spacing
+      </TR>
+      <TR>
+        <TD PORT="insn_402667" ALIGN="RIGHT"><FONT FACE="monospace">402667: </FONT></TD>
+        <TD ALIGN="LEFT"><FONT FACE="monospace">XOR EAX,EAX</FONT></TD>
+        <TD>&nbsp;&nbsp;&nbsp;</TD> // for spacing
+      </TR>
+      <TR>
+        <TD PORT="insn_402669" ALIGN="RIGHT"><FONT FACE="monospace">402669: </FONT></TD>
+        <TD ALIGN="LEFT"><FONT FACE="monospace">CMP dword ptr [RCX],0x4550</FONT></TD>
+        <TD>&nbsp;&nbsp;&nbsp;</TD> // for spacing
+      </TR>
+      <TR>
+        <TD PORT="insn_40266f" ALIGN="RIGHT"><FONT FACE="monospace">40266f: </FONT></TD>
+        <TD ALIGN="LEFT"><FONT FACE="monospace">JZ 0x00402672</FONT></TD>
+        <TD>&nbsp;&nbsp;&nbsp;</TD> // for spacing
+      </TR>
+    </TABLE>>];
+  bb_402671 [shape=plaintext label=<
+    <TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0">
+      <TR>
+        <TD PORT="insn_402671" ALIGN="RIGHT"><FONT FACE="monospace">402671: </FONT></TD>
+        <TD ALIGN="LEFT"><FONT FACE="monospace">RET</FONT></TD>
+        <TD>&nbsp;&nbsp;&nbsp;</TD> // for spacing
+      </TR>
+    </TABLE>>];
+  bb_402672 [shape=plaintext label=<
+    <TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0">
+      <TR>
+        <TD PORT="insn_402672" ALIGN="RIGHT"><FONT FACE="monospace">402672: </FONT></TD>
+        <TD ALIGN="LEFT"><FONT FACE="monospace">XOR EAX,EAX</FONT></TD>
+        <TD>&nbsp;&nbsp;&nbsp;</TD> // for spacing
+      </TR>
+      <TR>
+        <TD PORT="insn_402674" ALIGN="RIGHT"><FONT FACE="monospace">402674: </FONT></TD>
+        <TD ALIGN="LEFT"><FONT FACE="monospace">CMP word ptr [RCX + 0x18],0x20b</FONT></TD>
+        <TD>&nbsp;&nbsp;&nbsp;</TD> // for spacing
+      </TR>
+      <TR>
+        <TD PORT="insn_40267a" ALIGN="RIGHT"><FONT FACE="monospace">40267a: </FONT></TD>
+        <TD ALIGN="LEFT"><FONT FACE="monospace">SETZ AL</FONT></TD>
+        <TD>&nbsp;&nbsp;&nbsp;</TD> // for spacing
+      </TR>
+      <TR>
+        <TD PORT="insn_40267d" ALIGN="RIGHT"><FONT FACE="monospace">40267d: </FONT></TD>
+        <TD ALIGN="LEFT"><FONT FACE="monospace">RET</FONT></TD>
+        <TD>&nbsp;&nbsp;&nbsp;</TD> // for spacing
+      </TR>
+    </TABLE>>];
+  bb_402660:insn_40266f -> bb_402672:insn_402672 [color=gray style=solid tooltip="CONDITIONAL_JUMP"];
+  bb_402660:insn_40266f -> bb_402671:insn_402671 [color=gray style=dashed tooltip="FALL_THROUGH"];
+}

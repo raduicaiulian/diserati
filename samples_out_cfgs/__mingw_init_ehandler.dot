@@ -1,0 +1,416 @@
+digraph "func 0x402110" {
+  newrank=true;
+  // Flow Type Legend
+  subgraph cluster_01 { 
+    rank=same;
+    node [shape=plaintext]
+    label = "Legend";
+    key [label=<<table border="0" cellpadding="2" cellspacing="0" cellborder="0">
+                  <tr><td align="right" port="i1">Jump/Fallthrough</td></tr>
+                  <tr><td align="right" port="i2">Call</td></tr>
+                  <tr><td align="right" port="i3">Conditional Jump</td></tr>
+                  <tr><td align="right" port="i4">Conditional Call</td></tr>
+                  <tr><td align="right" port="i5">Other</td></tr>
+               </table>>];
+    key2 [label=<<table border="0" cellpadding="2" cellspacing="0" cellborder="0">
+                   <tr><td port="i1">&nbsp;</td></tr>
+                   <tr><td port="i2">&nbsp;</td></tr>
+                   <tr><td port="i3">&nbsp;</td></tr>
+                   <tr><td port="i4">&nbsp;</td></tr>
+                   <tr><td port="i5">&nbsp;</td></tr>
+                </table>>];
+    key:i1:e -> key2:i1:w [color=gray style=dashed];
+    key:i2:e -> key2:i2:w [color=cyan4 style=dashed];
+    key:i3:e -> key2:i3:w [color=gray];
+    key:i4:e -> key2:i4:w [color=cyan4];
+    key:i5:e -> key2:i5:w [color=gray style=dotted];
+  }
+  bb_402110 [shape=plaintext label=<
+    <TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0">
+      <TR>
+        <TD PORT="insn_402110" ALIGN="RIGHT"><FONT FACE="monospace">402110: </FONT></TD>
+        <TD ALIGN="LEFT"><FONT FACE="monospace">PUSH R12</FONT></TD>
+        <TD>&nbsp;&nbsp;&nbsp;</TD> // for spacing
+      </TR>
+      <TR>
+        <TD PORT="insn_402112" ALIGN="RIGHT"><FONT FACE="monospace">402112: </FONT></TD>
+        <TD ALIGN="LEFT"><FONT FACE="monospace">PUSH RBP</FONT></TD>
+        <TD>&nbsp;&nbsp;&nbsp;</TD> // for spacing
+      </TR>
+      <TR>
+        <TD PORT="insn_402113" ALIGN="RIGHT"><FONT FACE="monospace">402113: </FONT></TD>
+        <TD ALIGN="LEFT"><FONT FACE="monospace">PUSH RDI</FONT></TD>
+        <TD>&nbsp;&nbsp;&nbsp;</TD> // for spacing
+      </TR>
+      <TR>
+        <TD PORT="insn_402114" ALIGN="RIGHT"><FONT FACE="monospace">402114: </FONT></TD>
+        <TD ALIGN="LEFT"><FONT FACE="monospace">PUSH RSI</FONT></TD>
+        <TD>&nbsp;&nbsp;&nbsp;</TD> // for spacing
+      </TR>
+      <TR>
+        <TD PORT="insn_402115" ALIGN="RIGHT"><FONT FACE="monospace">402115: </FONT></TD>
+        <TD ALIGN="LEFT"><FONT FACE="monospace">PUSH RBX</FONT></TD>
+        <TD>&nbsp;&nbsp;&nbsp;</TD> // for spacing
+      </TR>
+      <TR>
+        <TD PORT="insn_402116" ALIGN="RIGHT"><FONT FACE="monospace">402116: </FONT></TD>
+        <TD ALIGN="LEFT"><FONT FACE="monospace">SUB RSP,0x20</FONT></TD>
+        <TD>&nbsp;&nbsp;&nbsp;</TD> // for spacing
+      </TR>
+      <TR>
+        <TD PORT="insn_40211a" ALIGN="RIGHT"><FONT FACE="monospace">40211a: </FONT></TD>
+        <TD ALIGN="LEFT"><FONT FACE="monospace">CALL 0x004028b0</FONT></TD>
+        <TD>&nbsp;&nbsp;&nbsp;</TD> // for spacing
+      </TR>
+      <TR>
+        <TD PORT="insn_40211f" ALIGN="RIGHT"><FONT FACE="monospace">40211f: </FONT></TD>
+        <TD ALIGN="LEFT"><FONT FACE="monospace">MOV RBP,RAX</FONT></TD>
+        <TD>&nbsp;&nbsp;&nbsp;</TD> // for spacing
+      </TR>
+      <TR>
+        <TD PORT="insn_402122" ALIGN="RIGHT"><FONT FACE="monospace">402122: </FONT></TD>
+        <TD ALIGN="LEFT"><FONT FACE="monospace">MOV EAX,dword ptr [0x00407648]</FONT></TD>
+        <TD>&nbsp;&nbsp;&nbsp;</TD> // for spacing
+      </TR>
+      <TR>
+        <TD PORT="insn_402128" ALIGN="RIGHT"><FONT FACE="monospace">402128: </FONT></TD>
+        <TD ALIGN="LEFT"><FONT FACE="monospace">TEST EAX,EAX</FONT></TD>
+        <TD>&nbsp;&nbsp;&nbsp;</TD> // for spacing
+      </TR>
+      <TR>
+        <TD PORT="insn_40212a" ALIGN="RIGHT"><FONT FACE="monospace">40212a: </FONT></TD>
+        <TD ALIGN="LEFT"><FONT FACE="monospace">JNZ 0x00402151</FONT></TD>
+        <TD>&nbsp;&nbsp;&nbsp;</TD> // for spacing
+      </TR>
+    </TABLE>>];
+  bb_40212c [shape=plaintext label=<
+    <TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0">
+      <TR>
+        <TD PORT="insn_40212c" ALIGN="RIGHT"><FONT FACE="monospace">40212c: </FONT></TD>
+        <TD ALIGN="LEFT"><FONT FACE="monospace">TEST RBP,RBP</FONT></TD>
+        <TD>&nbsp;&nbsp;&nbsp;</TD> // for spacing
+      </TR>
+      <TR>
+        <TD PORT="insn_40212f" ALIGN="RIGHT"><FONT FACE="monospace">40212f: </FONT></TD>
+        <TD ALIGN="LEFT"><FONT FACE="monospace">JZ 0x00402151</FONT></TD>
+        <TD>&nbsp;&nbsp;&nbsp;</TD> // for spacing
+      </TR>
+    </TABLE>>];
+  bb_402131 [shape=plaintext label=<
+    <TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0">
+      <TR>
+        <TD PORT="insn_402131" ALIGN="RIGHT"><FONT FACE="monospace">402131: </FONT></TD>
+        <TD ALIGN="LEFT"><FONT FACE="monospace">LEA RCX,[0x404330]</FONT></TD>
+        <TD>&nbsp;&nbsp;&nbsp;</TD> // for spacing
+      </TR>
+      <TR>
+        <TD PORT="insn_402138" ALIGN="RIGHT"><FONT FACE="monospace">402138: </FONT></TD>
+        <TD ALIGN="LEFT"><FONT FACE="monospace">MOV dword ptr [0x00407648],0x1</FONT></TD>
+        <TD>&nbsp;&nbsp;&nbsp;</TD> // for spacing
+      </TR>
+      <TR>
+        <TD PORT="insn_402142" ALIGN="RIGHT"><FONT FACE="monospace">402142: </FONT></TD>
+        <TD ALIGN="LEFT"><FONT FACE="monospace">CALL 0x004026f0</FONT></TD>
+        <TD>&nbsp;&nbsp;&nbsp;</TD> // for spacing
+      </TR>
+      <TR>
+        <TD PORT="insn_402147" ALIGN="RIGHT"><FONT FACE="monospace">402147: </FONT></TD>
+        <TD ALIGN="LEFT"><FONT FACE="monospace">TEST RAX,RAX</FONT></TD>
+        <TD>&nbsp;&nbsp;&nbsp;</TD> // for spacing
+      </TR>
+      <TR>
+        <TD PORT="insn_40214a" ALIGN="RIGHT"><FONT FACE="monospace">40214a: </FONT></TD>
+        <TD ALIGN="LEFT"><FONT FACE="monospace">JZ 0x00402160</FONT></TD>
+        <TD>&nbsp;&nbsp;&nbsp;</TD> // for spacing
+      </TR>
+    </TABLE>>];
+  bb_40214c [shape=plaintext label=<
+    <TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0">
+      <TR>
+        <TD PORT="insn_40214c" ALIGN="RIGHT"><FONT FACE="monospace">40214c: </FONT></TD>
+        <TD ALIGN="LEFT"><FONT FACE="monospace">MOV EAX,0x1</FONT></TD>
+        <TD>&nbsp;&nbsp;&nbsp;</TD> // for spacing
+      </TR>
+    </TABLE>>];
+  bb_402151 [shape=plaintext label=<
+    <TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0">
+      <TR>
+        <TD PORT="insn_402151" ALIGN="RIGHT"><FONT FACE="monospace">402151: </FONT></TD>
+        <TD ALIGN="LEFT"><FONT FACE="monospace">ADD RSP,0x20</FONT></TD>
+        <TD>&nbsp;&nbsp;&nbsp;</TD> // for spacing
+      </TR>
+      <TR>
+        <TD PORT="insn_402155" ALIGN="RIGHT"><FONT FACE="monospace">402155: </FONT></TD>
+        <TD ALIGN="LEFT"><FONT FACE="monospace">POP RBX</FONT></TD>
+        <TD>&nbsp;&nbsp;&nbsp;</TD> // for spacing
+      </TR>
+      <TR>
+        <TD PORT="insn_402156" ALIGN="RIGHT"><FONT FACE="monospace">402156: </FONT></TD>
+        <TD ALIGN="LEFT"><FONT FACE="monospace">POP RSI</FONT></TD>
+        <TD>&nbsp;&nbsp;&nbsp;</TD> // for spacing
+      </TR>
+      <TR>
+        <TD PORT="insn_402157" ALIGN="RIGHT"><FONT FACE="monospace">402157: </FONT></TD>
+        <TD ALIGN="LEFT"><FONT FACE="monospace">POP RDI</FONT></TD>
+        <TD>&nbsp;&nbsp;&nbsp;</TD> // for spacing
+      </TR>
+      <TR>
+        <TD PORT="insn_402158" ALIGN="RIGHT"><FONT FACE="monospace">402158: </FONT></TD>
+        <TD ALIGN="LEFT"><FONT FACE="monospace">POP RBP</FONT></TD>
+        <TD>&nbsp;&nbsp;&nbsp;</TD> // for spacing
+      </TR>
+      <TR>
+        <TD PORT="insn_402159" ALIGN="RIGHT"><FONT FACE="monospace">402159: </FONT></TD>
+        <TD ALIGN="LEFT"><FONT FACE="monospace">POP R12</FONT></TD>
+        <TD>&nbsp;&nbsp;&nbsp;</TD> // for spacing
+      </TR>
+      <TR>
+        <TD PORT="insn_40215b" ALIGN="RIGHT"><FONT FACE="monospace">40215b: </FONT></TD>
+        <TD ALIGN="LEFT"><FONT FACE="monospace">RET</FONT></TD>
+        <TD>&nbsp;&nbsp;&nbsp;</TD> // for spacing
+      </TR>
+    </TABLE>>];
+  bb_402160 [shape=plaintext label=<
+    <TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0">
+      <TR>
+        <TD PORT="insn_402160" ALIGN="RIGHT"><FONT FACE="monospace">402160: </FONT></TD>
+        <TD ALIGN="LEFT"><FONT FACE="monospace">LEA RBX,[0x407760]</FONT></TD>
+        <TD>&nbsp;&nbsp;&nbsp;</TD> // for spacing
+      </TR>
+      <TR>
+        <TD PORT="insn_402167" ALIGN="RIGHT"><FONT FACE="monospace">402167: </FONT></TD>
+        <TD ALIGN="LEFT"><FONT FACE="monospace">MOV ECX,0x30</FONT></TD>
+        <TD>&nbsp;&nbsp;&nbsp;</TD> // for spacing
+      </TR>
+      <TR>
+        <TD PORT="insn_40216c" ALIGN="RIGHT"><FONT FACE="monospace">40216c: </FONT></TD>
+        <TD ALIGN="LEFT"><FONT FACE="monospace">XOR ESI,ESI</FONT></TD>
+        <TD>&nbsp;&nbsp;&nbsp;</TD> // for spacing
+      </TR>
+      <TR>
+        <TD PORT="insn_40216e" ALIGN="RIGHT"><FONT FACE="monospace">40216e: </FONT></TD>
+        <TD ALIGN="LEFT"><FONT FACE="monospace">LEA RDX,[0x407660]</FONT></TD>
+        <TD>&nbsp;&nbsp;&nbsp;</TD> // for spacing
+      </TR>
+      <TR>
+        <TD PORT="insn_402175" ALIGN="RIGHT"><FONT FACE="monospace">402175: </FONT></TD>
+        <TD ALIGN="LEFT"><FONT FACE="monospace">MOV RDI,RBX</FONT></TD>
+        <TD>&nbsp;&nbsp;&nbsp;</TD> // for spacing
+      </TR>
+      <TR>
+        <TD PORT="insn_402178" ALIGN="RIGHT"><FONT FACE="monospace">402178: </FONT></TD>
+        <TD ALIGN="LEFT"><FONT FACE="monospace">STOSQ.REP RDI</FONT></TD>
+        <TD>&nbsp;&nbsp;&nbsp;</TD> // for spacing
+      </TR>
+      <TR>
+        <TD PORT="insn_40217b" ALIGN="RIGHT"><FONT FACE="monospace">40217b: </FONT></TD>
+        <TD ALIGN="LEFT"><FONT FACE="monospace">LEA R12,[0x401f70]</FONT></TD>
+        <TD>&nbsp;&nbsp;&nbsp;</TD> // for spacing
+      </TR>
+      <TR>
+        <TD PORT="insn_402182" ALIGN="RIGHT"><FONT FACE="monospace">402182: </FONT></TD>
+        <TD ALIGN="LEFT"><FONT FACE="monospace">MOV ECX,0x20</FONT></TD>
+        <TD>&nbsp;&nbsp;&nbsp;</TD> // for spacing
+      </TR>
+      <TR>
+        <TD PORT="insn_402187" ALIGN="RIGHT"><FONT FACE="monospace">402187: </FONT></TD>
+        <TD ALIGN="LEFT"><FONT FACE="monospace">MOV RDI,RDX</FONT></TD>
+        <TD>&nbsp;&nbsp;&nbsp;</TD> // for spacing
+      </TR>
+      <TR>
+        <TD PORT="insn_40218a" ALIGN="RIGHT"><FONT FACE="monospace">40218a: </FONT></TD>
+        <TD ALIGN="LEFT"><FONT FACE="monospace">STOSQ.REP RDI</FONT></TD>
+        <TD>&nbsp;&nbsp;&nbsp;</TD> // for spacing
+      </TR>
+      <TR>
+        <TD PORT="insn_40218d" ALIGN="RIGHT"><FONT FACE="monospace">40218d: </FONT></TD>
+        <TD ALIGN="LEFT"><FONT FACE="monospace">SUB R12,RBP</FONT></TD>
+        <TD>&nbsp;&nbsp;&nbsp;</TD> // for spacing
+      </TR>
+      <TR>
+        <TD PORT="insn_402190" ALIGN="RIGHT"><FONT FACE="monospace">402190: </FONT></TD>
+        <TD ALIGN="LEFT"><FONT FACE="monospace">MOV RDI,RDX</FONT></TD>
+        <TD>&nbsp;&nbsp;&nbsp;</TD> // for spacing
+      </TR>
+      <TR>
+        <TD PORT="insn_402193" ALIGN="RIGHT"><FONT FACE="monospace">402193: </FONT></TD>
+        <TD ALIGN="LEFT"><FONT FACE="monospace">JMP 0x004021c3</FONT></TD>
+        <TD>&nbsp;&nbsp;&nbsp;</TD> // for spacing
+      </TR>
+    </TABLE>>];
+  bb_402195 [shape=plaintext label=<
+    <TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0">
+      <TR>
+        <TD PORT="insn_402195" ALIGN="RIGHT"><FONT FACE="monospace">402195: </FONT></TD>
+        <TD ALIGN="LEFT"><FONT FACE="monospace">MOV byte ptr [RDI],0x9</FONT></TD>
+        <TD>&nbsp;&nbsp;&nbsp;</TD> // for spacing
+      </TR>
+      <TR>
+        <TD PORT="insn_402198" ALIGN="RIGHT"><FONT FACE="monospace">402198: </FONT></TD>
+        <TD ALIGN="LEFT"><FONT FACE="monospace">ADD RSI,0x1</FONT></TD>
+        <TD>&nbsp;&nbsp;&nbsp;</TD> // for spacing
+      </TR>
+      <TR>
+        <TD PORT="insn_40219c" ALIGN="RIGHT"><FONT FACE="monospace">40219c: </FONT></TD>
+        <TD ALIGN="LEFT"><FONT FACE="monospace">ADD RBX,0xc</FONT></TD>
+        <TD>&nbsp;&nbsp;&nbsp;</TD> // for spacing
+      </TR>
+      <TR>
+        <TD PORT="insn_4021a0" ALIGN="RIGHT"><FONT FACE="monospace">4021a0: </FONT></TD>
+        <TD ALIGN="LEFT"><FONT FACE="monospace">MOV dword ptr [RDI + 0x4],R12D</FONT></TD>
+        <TD>&nbsp;&nbsp;&nbsp;</TD> // for spacing
+      </TR>
+      <TR>
+        <TD PORT="insn_4021a4" ALIGN="RIGHT"><FONT FACE="monospace">4021a4: </FONT></TD>
+        <TD ALIGN="LEFT"><FONT FACE="monospace">MOV ECX,dword ptr [RAX + 0xc]</FONT></TD>
+        <TD>&nbsp;&nbsp;&nbsp;</TD> // for spacing
+      </TR>
+      <TR>
+        <TD PORT="insn_4021a7" ALIGN="RIGHT"><FONT FACE="monospace">4021a7: </FONT></TD>
+        <TD ALIGN="LEFT"><FONT FACE="monospace">MOV dword ptr [RBX + -0xc],ECX</FONT></TD>
+        <TD>&nbsp;&nbsp;&nbsp;</TD> // for spacing
+      </TR>
+      <TR>
+        <TD PORT="insn_4021aa" ALIGN="RIGHT"><FONT FACE="monospace">4021aa: </FONT></TD>
+        <TD ALIGN="LEFT"><FONT FACE="monospace">ADD ECX,dword ptr [RAX + 0x8]</FONT></TD>
+        <TD>&nbsp;&nbsp;&nbsp;</TD> // for spacing
+      </TR>
+      <TR>
+        <TD PORT="insn_4021ad" ALIGN="RIGHT"><FONT FACE="monospace">4021ad: </FONT></TD>
+        <TD ALIGN="LEFT"><FONT FACE="monospace">MOV RAX,RDI</FONT></TD>
+        <TD>&nbsp;&nbsp;&nbsp;</TD> // for spacing
+      </TR>
+      <TR>
+        <TD PORT="insn_4021b0" ALIGN="RIGHT"><FONT FACE="monospace">4021b0: </FONT></TD>
+        <TD ALIGN="LEFT"><FONT FACE="monospace">ADD RDI,0x8</FONT></TD>
+        <TD>&nbsp;&nbsp;&nbsp;</TD> // for spacing
+      </TR>
+      <TR>
+        <TD PORT="insn_4021b4" ALIGN="RIGHT"><FONT FACE="monospace">4021b4: </FONT></TD>
+        <TD ALIGN="LEFT"><FONT FACE="monospace">SUB RAX,RBP</FONT></TD>
+        <TD>&nbsp;&nbsp;&nbsp;</TD> // for spacing
+      </TR>
+      <TR>
+        <TD PORT="insn_4021b7" ALIGN="RIGHT"><FONT FACE="monospace">4021b7: </FONT></TD>
+        <TD ALIGN="LEFT"><FONT FACE="monospace">MOV dword ptr [RBX + -0x4],EAX</FONT></TD>
+        <TD>&nbsp;&nbsp;&nbsp;</TD> // for spacing
+      </TR>
+      <TR>
+        <TD PORT="insn_4021ba" ALIGN="RIGHT"><FONT FACE="monospace">4021ba: </FONT></TD>
+        <TD ALIGN="LEFT"><FONT FACE="monospace">MOV dword ptr [RBX + -0x8],ECX</FONT></TD>
+        <TD>&nbsp;&nbsp;&nbsp;</TD> // for spacing
+      </TR>
+      <TR>
+        <TD PORT="insn_4021bd" ALIGN="RIGHT"><FONT FACE="monospace">4021bd: </FONT></TD>
+        <TD ALIGN="LEFT"><FONT FACE="monospace">CMP RSI,0x20</FONT></TD>
+        <TD>&nbsp;&nbsp;&nbsp;</TD> // for spacing
+      </TR>
+      <TR>
+        <TD PORT="insn_4021c1" ALIGN="RIGHT"><FONT FACE="monospace">4021c1: </FONT></TD>
+        <TD ALIGN="LEFT"><FONT FACE="monospace">JZ 0x004021f5</FONT></TD>
+        <TD>&nbsp;&nbsp;&nbsp;</TD> // for spacing
+      </TR>
+    </TABLE>>];
+  bb_4021c3 [shape=plaintext label=<
+    <TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0">
+      <TR>
+        <TD PORT="insn_4021c3" ALIGN="RIGHT"><FONT FACE="monospace">4021c3: </FONT></TD>
+        <TD ALIGN="LEFT"><FONT FACE="monospace">MOV RCX,RSI</FONT></TD>
+        <TD>&nbsp;&nbsp;&nbsp;</TD> // for spacing
+      </TR>
+      <TR>
+        <TD PORT="insn_4021c6" ALIGN="RIGHT"><FONT FACE="monospace">4021c6: </FONT></TD>
+        <TD ALIGN="LEFT"><FONT FACE="monospace">CALL 0x00402840</FONT></TD>
+        <TD>&nbsp;&nbsp;&nbsp;</TD> // for spacing
+      </TR>
+      <TR>
+        <TD PORT="insn_4021cb" ALIGN="RIGHT"><FONT FACE="monospace">4021cb: </FONT></TD>
+        <TD ALIGN="LEFT"><FONT FACE="monospace">TEST RAX,RAX</FONT></TD>
+        <TD>&nbsp;&nbsp;&nbsp;</TD> // for spacing
+      </TR>
+      <TR>
+        <TD PORT="insn_4021ce" ALIGN="RIGHT"><FONT FACE="monospace">4021ce: </FONT></TD>
+        <TD ALIGN="LEFT"><FONT FACE="monospace">JNZ 0x00402195</FONT></TD>
+        <TD>&nbsp;&nbsp;&nbsp;</TD> // for spacing
+      </TR>
+    </TABLE>>];
+  bb_4021d0 [shape=plaintext label=<
+    <TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0">
+      <TR>
+        <TD PORT="insn_4021d0" ALIGN="RIGHT"><FONT FACE="monospace">4021d0: </FONT></TD>
+        <TD ALIGN="LEFT"><FONT FACE="monospace">TEST RSI,RSI</FONT></TD>
+        <TD>&nbsp;&nbsp;&nbsp;</TD> // for spacing
+      </TR>
+      <TR>
+        <TD PORT="insn_4021d3" ALIGN="RIGHT"><FONT FACE="monospace">4021d3: </FONT></TD>
+        <TD ALIGN="LEFT"><FONT FACE="monospace">MOV EDX,ESI</FONT></TD>
+        <TD>&nbsp;&nbsp;&nbsp;</TD> // for spacing
+      </TR>
+      <TR>
+        <TD PORT="insn_4021d5" ALIGN="RIGHT"><FONT FACE="monospace">4021d5: </FONT></TD>
+        <TD ALIGN="LEFT"><FONT FACE="monospace">JZ 0x0040214c</FONT></TD>
+        <TD>&nbsp;&nbsp;&nbsp;</TD> // for spacing
+      </TR>
+    </TABLE>>];
+  bb_4021db [shape=plaintext label=<
+    <TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0">
+      <TR>
+        <TD PORT="insn_4021db" ALIGN="RIGHT"><FONT FACE="monospace">4021db: </FONT></TD>
+        <TD ALIGN="LEFT"><FONT FACE="monospace">NOP dword ptr [RAX + RAX*0x1]</FONT></TD>
+        <TD>&nbsp;&nbsp;&nbsp;</TD> // for spacing
+      </TR>
+    </TABLE>>];
+  bb_4021e0 [shape=plaintext label=<
+    <TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0">
+      <TR>
+        <TD PORT="insn_4021e0" ALIGN="RIGHT"><FONT FACE="monospace">4021e0: </FONT></TD>
+        <TD ALIGN="LEFT"><FONT FACE="monospace">LEA RCX,[0x407760]</FONT></TD>
+        <TD>&nbsp;&nbsp;&nbsp;</TD> // for spacing
+      </TR>
+      <TR>
+        <TD PORT="insn_4021e7" ALIGN="RIGHT"><FONT FACE="monospace">4021e7: </FONT></TD>
+        <TD ALIGN="LEFT"><FONT FACE="monospace">MOV R8,RBP</FONT></TD>
+        <TD>&nbsp;&nbsp;&nbsp;</TD> // for spacing
+      </TR>
+      <TR>
+        <TD PORT="insn_4021ea" ALIGN="RIGHT"><FONT FACE="monospace">4021ea: </FONT></TD>
+        <TD ALIGN="LEFT"><FONT FACE="monospace">CALL qword ptr [0x0040824c]</FONT></TD>
+        <TD>&nbsp;&nbsp;&nbsp;</TD> // for spacing
+      </TR>
+      <TR>
+        <TD PORT="insn_4021f0" ALIGN="RIGHT"><FONT FACE="monospace">4021f0: </FONT></TD>
+        <TD ALIGN="LEFT"><FONT FACE="monospace">JMP 0x0040214c</FONT></TD>
+        <TD>&nbsp;&nbsp;&nbsp;</TD> // for spacing
+      </TR>
+    </TABLE>>];
+  bb_4021f5 [shape=plaintext label=<
+    <TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0">
+      <TR>
+        <TD PORT="insn_4021f5" ALIGN="RIGHT"><FONT FACE="monospace">4021f5: </FONT></TD>
+        <TD ALIGN="LEFT"><FONT FACE="monospace">MOV EDX,0x20</FONT></TD>
+        <TD>&nbsp;&nbsp;&nbsp;</TD> // for spacing
+      </TR>
+      <TR>
+        <TD PORT="insn_4021fa" ALIGN="RIGHT"><FONT FACE="monospace">4021fa: </FONT></TD>
+        <TD ALIGN="LEFT"><FONT FACE="monospace">JMP 0x004021e0</FONT></TD>
+        <TD>&nbsp;&nbsp;&nbsp;</TD> // for spacing
+      </TR>
+    </TABLE>>];
+  bb_4021db:insn_4021db -> bb_4021e0:insn_4021e0 [color=gray style=dashed tooltip="FALL_THROUGH"];
+  bb_402195:insn_4021c1 -> bb_4021f5:insn_4021f5 [color=gray style=solid tooltip="CONDITIONAL_JUMP"];
+  bb_402195:insn_4021c1 -> bb_4021c3:insn_4021c3 [color=gray style=dashed tooltip="FALL_THROUGH"];
+  bb_4021f5:insn_4021fa -> bb_4021e0:insn_4021e0 [color=gray style=dashed tooltip="UNCONDITIONAL_JUMP"];
+  bb_402131:insn_40214a -> bb_402160:insn_402160 [color=gray style=solid tooltip="CONDITIONAL_JUMP"];
+  bb_402131:insn_40214a -> bb_40214c:insn_40214c [color=gray style=dashed tooltip="FALL_THROUGH"];
+  bb_402110:insn_40212a -> bb_402151:insn_402151 [color=gray style=solid tooltip="CONDITIONAL_JUMP"];
+  bb_402110:insn_40212a -> bb_40212c:insn_40212c [color=gray style=dashed tooltip="FALL_THROUGH"];
+  bb_4021d0:insn_4021d5 -> bb_40214c:insn_40214c [color=gray style=solid tooltip="CONDITIONAL_JUMP"];
+  bb_4021d0:insn_4021d5 -> bb_4021db:insn_4021db [color=gray style=dashed tooltip="FALL_THROUGH"];
+  bb_40212c:insn_40212f -> bb_402151:insn_402151 [color=gray style=solid tooltip="CONDITIONAL_JUMP"];
+  bb_40212c:insn_40212f -> bb_402131:insn_402131 [color=gray style=dashed tooltip="FALL_THROUGH"];
+  bb_40214c:insn_40214c -> bb_402151:insn_402151 [color=gray style=dashed tooltip="FALL_THROUGH"];
+  bb_4021c3:insn_4021ce -> bb_402195:insn_402195 [color=gray style=solid tooltip="CONDITIONAL_JUMP"];
+  bb_4021c3:insn_4021ce -> bb_4021d0:insn_4021d0 [color=gray style=dashed tooltip="FALL_THROUGH"];
+  bb_402160:insn_402193 -> bb_4021c3:insn_4021c3 [color=gray style=dashed tooltip="UNCONDITIONAL_JUMP"];
+  bb_4021e0:insn_4021f0 -> bb_40214c:insn_40214c [color=gray style=dashed tooltip="UNCONDITIONAL_JUMP"];
+}
