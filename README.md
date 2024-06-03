@@ -35,7 +35,7 @@ In order to generate the CFG I'm working on 3 plans:
 
 # How to visualize dot files
 1. [online tool](https://www.bing.com/ck/a?!&&p=7a3e2cd9e8160019JmltdHM9MTcxNzIwMDAwMCZpZ3VpZD0xYjRiODllNS1kZmVlLTYwN2MtMTY5NC05YTM4ZGUzNzYxNDgmaW5zaWQ9NTE5Ng&ptn=3&ver=2&hsh=3&fclid=1b4b89e5-dfee-607c-1694-9a38de376148&psq=dot+graph+viewer&u=a1aHR0cHM6Ly9kcmVhbXB1Zi5naXRodWIuaW8vR3JhcGh2aXpPbmxpbmUv&ntb=1)
-2. Using dot program on linux(discovered by Mircea, not explored yet)
+2. Using dot program on linux as [shown here](https://gist.github.com/bin2415/15028e78d5cf0c708fe1ab82fc252799?permalink_comment_id=3587401#gistcomment-3587401)(not explored yet)
 
 
 
