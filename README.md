@@ -32,8 +32,8 @@ In order to generate the CFG I'm working on 3 directions:
 # Familiarize with Analysis Options
 
 * DWARF analyzer seems uselss for our porpouse (atm w'll focus on Windows only)
-* go trough [this material|https://github.com/HackOvert/GhidraSnippets?tab=readme-ov-file#using-the-flatprogramapi], it gets you up to speed with the basics of flat Programing/Decompiler API + Complex API
-* explore the functions from [here|https://github.com/NationalSecurityAgency/ghidra/issues/444]
+* go trough [this material](https://github.com/HackOvert/GhidraSnippets?tab=readme-ov-file#using-the-flatprogramapi), it gets you up to speed with the basics of flat Programing/Decompiler API + Complex API
+* explore the functions from [here](https://github.com/NationalSecurityAgency/ghidra/issues/444)
 
 
 # How to visualize dot files
