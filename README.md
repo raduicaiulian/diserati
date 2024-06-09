@@ -18,6 +18,7 @@ In order to generate the CFG I'm working on 3 directions:
 
 1. Attempted to use [this blog](https://clearbluejar.github.io/posts/callgraphs-with-ghidra-pyhidra-and-jpype/) to generate the CFG for a sample. Failed because I'm unable to instantiate monitor object, this [issue](https://github.com/dod-cyber-crime-center/pyhidra/issues/17) seemed related but did not helped. ~~It seems that it could be added by **add_classpaths**, but I'm not sure what is the java class that needs to be imported.(proved to be a false assumption).~~ It seems that it is provided by [`ghidra-stubs`](https://github.com/clearbluejar/ghidra-pyhidra-callgraphs/blob/77a013f360fae69b582bd75f6277ad8e43290545/requirements.txt#L1C1-L1C13)(see [L266](https://github.com/clearbluejar/ghidra-pyhidra-callgraphs/blob/77a013f360fae69b582bd75f6277ad8e43290545/ghidra_pyhidra_callgraphs.py#L266) and [L20](https://github.com/clearbluejar/ghidra-pyhidra-callgraphs/blob/77a013f360fae69b582bd75f6277ad8e43290545/ghidra_pyhidra_callgraphs.py#L20)).
 2. Use [the gist](https://gist.github.com/bin2415/15028e78d5cf0c708fe1ab82fc252799) found by Ciprian
+The following snippet of code should be used to run the gist:
 ```
     set GHIDRA_PATH="C:\Users\%USERNAME%\Documents\ghidra_11.0.3_PUBLIC"
     set SCRIPT="ghidraCFG.py"
@@ -25,7 +26,7 @@ In order to generate the CFG I'm working on 3 directions:
     set SCRIPT_PATH="C:\Users\%USERNAME%\Desktop\ghidra_script"
 
     %GHIDRA_PATH%\support\analyzeHeadless %TMP% TMP_PROJ -scriptPath %SCRIPT_PATH% -postScript %SCRIPT% -deleteProject -import %EXECUTABLE_TO_BE_ANALISED%
-```
+```../README.md
 
 3. Play with Ghidra Script Manager, from what I see in the gist from the previous point, it looks like whatever script I craft, in theory, it should be easy to make it headless
 
