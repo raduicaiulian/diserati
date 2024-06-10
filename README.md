@@ -26,7 +26,7 @@ The following snippet of code should be used to run the gist:
     set SCRIPT_PATH="C:\Users\%USERNAME%\Desktop\ghidra_script"
 
     %GHIDRA_PATH%\support\analyzeHeadless %TMP% TMP_PROJ -scriptPath %SCRIPT_PATH% -postScript %SCRIPT% -deleteProject -import %EXECUTABLE_TO_BE_ANALISED%
-```../README.md
+```
 
 3. Play with Ghidra Script Manager, from what I see in the gist from the previous point, it looks like whatever script I craft, in theory, it should be easy to make it headless
 
