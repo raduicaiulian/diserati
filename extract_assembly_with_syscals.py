@@ -7,7 +7,9 @@
 
 
 #TODO Add User Code Here
-
+# This script was built based on these two resources:
+#	https://github.com/NationalSecurityAgency/ghidra/issues/1994
+#	https://github.com/NationalSecurityAgency/ghidra/issues/2001
 instructionList = []
 for instr in currentProgram.getListing().getInstructions(True):
     instructionList.append(instr)
